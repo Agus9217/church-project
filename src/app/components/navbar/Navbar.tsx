@@ -7,10 +7,12 @@ export const Navbar = () => {
   return (
     <Stack
       as={'header'}
+      position={'fixed'}
       spacing={0}
       w={'100%'}
       minH={'60px'}
       direction={'row'}
+      zIndex={1000}
     >
       <Flex
         maxW={'300px'}
