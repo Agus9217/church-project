@@ -10,7 +10,8 @@ export const DesktopNavbar = () => {
       flexDirection={'row'}
       justifyContent={'center'}
       alignItems={'center'}
-      gap={'15px'}
+      gap={'30px'}
+      color={'white'}
     >
       {
         navItem.map(item => (

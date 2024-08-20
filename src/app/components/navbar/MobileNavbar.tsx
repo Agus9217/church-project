@@ -8,8 +8,9 @@ export const MobileNavbar = () => {
       autoSelect={false}
     >
       <MenuButton
+        color={'white'}
         as={IconButton}
-        icon={<IoMenuOutline size={'24px'} />}
+        icon={<IoMenuOutline size={'30px'} />}
         variant={'ghost'}
         _hover={{
           style: 'none'

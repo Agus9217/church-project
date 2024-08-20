@@ -1,5 +1,4 @@
-import { Button, Flex, Show, Stack } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Button, Flex, Img, Show, Stack } from '@chakra-ui/react'
 import { DesktopNavbar } from './DesktopNavbar'
 import { MobileNavbar } from './MobileNavbar'
 
@@ -7,10 +6,11 @@ export const Navbar = () => {
   return (
     <Stack
       as={'header'}
+      py={2}
       position={'fixed'}
       spacing={0}
       w={'100%'}
-      minH={'60px'}
+      minH={{ base: '60px', lg: '80px' }}
       direction={'row'}
       zIndex={1000}
     >
@@ -20,11 +20,12 @@ export const Navbar = () => {
         alignItems={'center'}
         justifyContent={'center'}
       >
-        <Image
-          src={'/worship-church-logo.png'}
-          width={50}
-          height={50}
+        <Img
+          src={'/worship-church.svg'}
+          width={{ base: '60px' }}
+          height={{ base: '60px' }}
           alt='Logo iglesia'
+          fill={'white'}
         />
       </Flex>
       <Flex
@@ -49,8 +50,7 @@ export const Navbar = () => {
           above={'lg'}
         >
           <Button
-            colorScheme='yellow'
-            variant={'outline'}
+            colorScheme='blue'
             rounded={'none'}
           >
             Soy nuevo
