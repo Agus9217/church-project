@@ -1,68 +1,46 @@
-import { Button, Flex, Img, Show, Stack } from '@chakra-ui/react'
-import { DesktopNavbar } from './DesktopNavbar'
-import { MobileNavbar } from './MobileNavbar'
+import { Flex, Divider, Text, VStack } from "@chakra-ui/react"
+import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
 export const Navbar = () => {
   return (
-    <Stack
+    <VStack
       as={'header'}
-      py={2}
-      position={'fixed'}
       spacing={0}
       w={'100%'}
-      minH={{ base: '60px', lg: '80px' }}
-      direction={'row'}
+      minH={'70px'}
+      pos={'fixed'}
       zIndex={1000}
     >
       <Flex
-        maxW={'300px'}
-        flexGrow={1}
+        w={'100%'}
+        justifyContent={'space-between'}
         alignItems={'center'}
-        justifyContent={'center'}
+        p={2}
       >
-        <Img
-          src={'/worship-church.svg'}
-          width={{ base: '60px' }}
-          height={{ base: '60px' }}
-          alt='Logo iglesia'
-          fill={'white'}
-        />
-      </Flex>
-      <Flex
-        as={'nav'}
-        flexGrow={2}
-        alignItems={'center'}
-        justifyContent={'center'}
-      >
-        <Show
-          above={'lg'}
+        <Flex
+          alignItems={'center'}
         >
-          <DesktopNavbar />
-        </Show>
-      </Flex>
-      <Flex
-        maxW={'300px'}
-        flexGrow={1}
-        alignItems={'center'}
-        justifyContent={'center'}
-      >
-        <Show
-          above={'lg'}
-        >
-          <Button
-            colorScheme='blue'
-            rounded={'none'}
+          <Text>
+            Seguinos en nuestras redes
+          </Text>
+          <Flex
+            alignItems={'center'}
+            gap={2}
+            ml={2}
           >
-            Soy nuevo
-          </Button>
-        </Show>
-        <Show
-          below={'lg'}
-        >
-          <MobileNavbar />
-        </Show>
+            <IoLogoFacebook size={'20px'} />
+            <IoLogoInstagram size={'20px'} />
+          </Flex>
+        </Flex>
+        <Flex>
+          Comunicate: +1122334455
+        </Flex>
       </Flex>
-    </Stack>
+      <Divider
+        borderColor={'black'}
+      />
+
+    </VStack>
   )
 }
 
