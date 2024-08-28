@@ -1,18 +1,29 @@
-import { Flex, HStack } from "@chakra-ui/react"
+'use client'
+
+import { Box, Flex, HStack } from "@chakra-ui/react"
 import { DesktopNavbar } from "./DesktopNavbar";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { DrawerNav } from "../drawer/Drawer";
 
 export const Navbar = () => {
+
+  const MotionComponent = motion(Box)
+
   return (
-    <HStack
+    <MotionComponent
       justifyContent={'space-between'}
       alignItems={'center'}
       as={'header'}
-      spacing={0}
+      display={'flex'}
+      flexDirection={'row'}
       w={'100%'}
       minH={'60px'}
       pos={'fixed'}
       color={'white'}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, type: 'linear' }}
       zIndex={1000}
     >
       <Flex
@@ -43,9 +54,10 @@ export const Navbar = () => {
         maxW={'150px'}
         flexGrow={1}
       >
+        <DrawerNav />
       </Flex>
 
-    </HStack>
+    </MotionComponent>
   )
 }
 
