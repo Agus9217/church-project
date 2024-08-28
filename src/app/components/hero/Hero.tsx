@@ -2,7 +2,6 @@
 
 import { Box, Button, Img, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import React from 'react'
 
 export const Hero = () => {
 
@@ -13,11 +12,11 @@ export const Hero = () => {
       position={'relative'}
     >
       <Img
-        src='/hero-image.jpg' 
+        src='/hero-image.jpg'
         w={'100%'}
         h={'100dvh'}
         objectFit={'cover'}
-        filter={'brightness(50%)'}
+        filter={'brightness(45%)'}
       />
       <Box
         position={'absolute'}
@@ -26,6 +25,8 @@ export const Hero = () => {
         transform={'translate(-50%, -50%)'}
         color={'white'}
         textAlign={'center'}
+        maxW={'90%'}
+        w={'100%'}
       >
         <MotionComponent
           as={Text}
@@ -33,7 +34,7 @@ export const Hero = () => {
           fontWeight={400}
           fontStyle={'italic'}
           fontSize={'1.4rem'}
-          textShadow={'lg'}
+          textShadow={'xl'}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
@@ -47,7 +48,7 @@ export const Hero = () => {
           textTransform={'uppercase'}
           fontWeight={500}
           letterSpacing={9}
-          textShadow={'lg'}
+          textShadow={'xl'}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
@@ -59,7 +60,7 @@ export const Hero = () => {
           textAlign={'center'}
           maxW={'60%'}
           fontSize={'1.2rem'}
-          textShadow={'lg'}
+          textShadow={'xl'}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
@@ -74,6 +75,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
+          rounded={'none'}
         >
           Ver más
         </MotionComponent>

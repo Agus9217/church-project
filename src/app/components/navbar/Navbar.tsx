@@ -1,51 +1,51 @@
-import { Flex, Divider, Text, VStack } from "@chakra-ui/react"
-import { IoLogoFacebook, IoLogoInstagram, IoCall } from "react-icons/io5";
+import { Flex, HStack } from "@chakra-ui/react"
+import { DesktopNavbar } from "./DesktopNavbar";
+import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <VStack
+    <HStack
+      justifyContent={'space-between'}
+      alignItems={'center'}
       as={'header'}
       spacing={0}
       w={'100%'}
-      minH={'70px'}
+      minH={'60px'}
       pos={'fixed'}
       color={'white'}
       zIndex={1000}
     >
       <Flex
-        w={'100%'}
-        justifyContent={'space-between'}
+        justifyContent={'center'}
         alignItems={'center'}
-        p={2}
+        maxW={'150px'}
+        flexGrow={1}
       >
-        <Flex
-          alignItems={'center'}
-        >
-          <Text>
-            Seguinos:
-          </Text>
-          <Flex
-            alignItems={'center'}
-            gap={2}
-            ml={2}
-          >
-            <IoLogoFacebook size={'20px'} />
-            <IoLogoInstagram size={'20px'} />
-          </Flex>
-        </Flex>
-        <Flex
-          alignItems={'center'}
-          gap={2}
-        >
-          <IoCall size={'20px'} />
-          +1122334455
-        </Flex>
+        <Image
+          src={'/worship-church.svg'}
+          alt={'Logo de la iglesia'}
+          width={50}
+          height={50}
+        />
       </Flex>
-      <Divider
-        borderColor={'white'}
-      />
+      <Flex
+        as={'nav'}
+        py={6}
+        justifyContent={'center'}
+        alignItems={'center'}
+        flexGrow={2}
+      >
+        <DesktopNavbar />
+      </Flex>
+      <Flex
+        alignItems={'center'}
+        justifyContent={'center'}
+        maxW={'150px'}
+        flexGrow={1}
+      >
+      </Flex>
 
-    </VStack>
+    </HStack>
   )
 }
 
