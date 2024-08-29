@@ -66,12 +66,14 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
           mx={'auto'}
+          display={{ base: 'none', md: 'block' }}
         >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error laborum quidem eveniet velit. Ex est quos, fugit illum officiis molestiae labore assumenda, dolores eos harum hic corporis ipsum reprehenderit minus!
         </MotionComponent>
         <MotionComponent
           my={6}
           as={Button}
+          size={'lg'}
           colorScheme={'teal'}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
