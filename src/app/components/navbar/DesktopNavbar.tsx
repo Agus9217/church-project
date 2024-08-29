@@ -11,7 +11,10 @@ export const DesktopNavbar = () => {
     >
       {
         navItem.map(item => (
-          <ListItem key={item.label}>
+          <ListItem
+            key={item.label}
+            textTransform={'uppercase'}
+          >
             {item.label}
           </ListItem>
         ))

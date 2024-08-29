@@ -14,7 +14,7 @@ export const Hero = () => {
       <Img
         src='/hero-image.jpg'
         w={'100%'}
-        h={'100dvh'}
+        h={{ base: '795px', xl: '100dvh' }}
         objectFit={'cover'}
         filter={'brightness(45%)'}
       />
@@ -44,7 +44,7 @@ export const Hero = () => {
         </MotionComponent>
         <MotionComponent
           as={'h1'}
-          fontSize={'5.6rem'}
+          fontSize={{ base: '2rem', lg: '4rem', xl: '5.6rem' }}
           textTransform={'uppercase'}
           fontWeight={500}
           letterSpacing={9}
@@ -52,6 +52,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'linear' }}
+          py={6}
         >
           Iglesia Cristiana en Barrio Nuevo
         </MotionComponent>
@@ -59,7 +60,7 @@ export const Hero = () => {
           as={Text}
           textAlign={'center'}
           maxW={'60%'}
-          fontSize={'1.2rem'}
+          fontSize={{ base: '15px', xl: '19px' }}
           textShadow={'xl'}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

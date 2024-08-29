@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, HStack } from "@chakra-ui/react"
+import { Box, Flex, HStack, Show } from "@chakra-ui/react"
 import { DesktopNavbar } from "./DesktopNavbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -46,7 +46,11 @@ export const Navbar = () => {
         alignItems={'center'}
         flexGrow={2}
       >
-        <DesktopNavbar />
+        <Show
+          above={'xl'}
+        >
+          <DesktopNavbar />
+        </Show>
       </Flex>
       <Flex
         alignItems={'center'}
