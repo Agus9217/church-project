@@ -8,6 +8,7 @@ export const DesktopNavbar = () => {
       alignItems={'center'}
       styleType={'none'}
       gap={8}
+      color={'white'}
     >
       {
         navItem.map(item => (

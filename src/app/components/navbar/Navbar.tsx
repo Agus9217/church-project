@@ -5,6 +5,7 @@ import { DesktopNavbar } from "./DesktopNavbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { DrawerNav } from "../drawer/Drawer";
+import { MobileNavbar } from "./MobileNavbar";
 
 export const Navbar = () => {
 
@@ -58,7 +59,16 @@ export const Navbar = () => {
         maxW={'150px'}
         flexGrow={1}
       >
-        <DrawerNav />
+        <Show
+          above={'xl'}
+        >
+          <DrawerNav />
+        </Show>
+        <Show
+          below={'xl'}
+        >
+          <MobileNavbar />
+        </Show>
       </Flex>
 
     </MotionComponent>
