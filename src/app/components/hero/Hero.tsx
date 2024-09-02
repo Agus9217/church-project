@@ -28,23 +28,10 @@ export const Hero = () => {
         maxW={'90%'}
         w={'100%'}
       >
-        <MotionComponent
-          as={Text}
-          fontFamily={'notoserif'}
-          fontWeight={400}
-          fontStyle={'italic'}
-          fontSize={'1.4rem'}
-          textShadow={'xl'}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: 'linear' }}
-          color={'orange.200'}
-        >
-          Bienvenidos
-        </MotionComponent>
+
         <MotionComponent
           as={'h1'}
-          fontSize={{ base: '2rem', lg: '4rem', xl: '5.6rem' }}
+          fontSize={{ base: '2.2rem', lg: '4rem', xl: '5.6rem', md: '3rem' }}
           textTransform={'uppercase'}
           fontWeight={500}
           letterSpacing={9}
