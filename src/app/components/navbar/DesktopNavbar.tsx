@@ -27,7 +27,8 @@ export const DesktopNavbar = () => {
                   color={'white'}
                   rounded={'none'}
                   _hover={{
-                    background: 'teal.500'
+                    background: 'none',
+                    color: 'teal.300'
                   }}
                   rightIcon={item.children && <IoIosArrowDown />}
                 >
