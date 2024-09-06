@@ -27,6 +27,7 @@ export const DrawerNav = () => {
         placement='right'
         onClose={onClose}
         finalFocusRef={btnRef}
+        blockScrollOnMount={false}
       >
         <DrawerOverlay />
         <DrawerContent>
